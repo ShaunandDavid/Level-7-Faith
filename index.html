@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Level 7 Faith — Where Stories Meet Salvation</title>
+  <meta name="description" content="Powerful testimonies and faith‑filled conversations that inspire believers and invite seekers to find eternal life in Christ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:rgba(255,255,255,.08);
+      --border:rgba(255,255,255,.12);
+      --text:#e7ecf5;
+      --muted:#a7b1c2;
+      --brand:#f0ad2c; /* warm gold */
+      --brand-2:#5ea3ff; /* accent */
+      --max:1200px;
+      --radius:20px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --blur:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; color:var(--text); background:radial-gradient(1200px 600px at 10% -10%, #20406a 0%, transparent 55%),
+                radial-gradient(1000px 500px at 90% -20%, #2a173d 0%, transparent 50%),
+                var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+
+    /* ===== NAV ===== */
+    .nav-wrap{position:sticky;top:0;z-index:50;background:rgba(5,8,12,.35);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;gap:24px;padding:14px 22px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .brand .logo{height:36px;width:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg, #ffd770, #f0ad2c); color:#141414; font-weight:900}
+    .brand small{display:block;color:var(--muted);font-weight:500}
+    .spacer{flex:1}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{padding:8px 12px;border-radius:12px;color:var(--muted)}
+    .menu a:hover{background:var(--card);color:var(--text)}
+    .cta{display:flex;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;border:1px solid var(--border);background:var(--card);backdrop-filter:blur(var(--blur)); box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,#ffd770,#f0ad2c); color:#141414; border-color:transparent; font-weight:700}
+    .btn.ghost:hover{border-color:#ffffff33}
+    .hide-mobile{display:none}
+
+    @media(min-width:960px){
+      .hide-mobile{display:inline-flex}
+    }
+
+    /* ===== HERO ===== */
+    header.hero{position:relative;overflow:hidden}
+    .hero .container{max-width:var(--max);margin:0 auto;padding:96px 22px 72px;display:grid;grid-template-columns:1.1fr;gap:40px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04)); border:1px solid var(--border); border-radius:var(--radius); padding:48px; backdrop-filter:blur(var(--blur)); box-shadow:var(--shadow)}
+    .eyebrow{font-weight:700;color:#ffffffcc; letter-spacing:.08em; text-transform:uppercase; font-size:12px}
+    .title{font-size:clamp(36px,6vw,64px);line-height:1.05;font-weight:900; margin:10px 0 6px}
+    .title .accent{color:var(--brand)}
+    .lead{font-size:clamp(16px,2.1vw,20px); color:var(--muted); max-width:60ch}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .kicker{margin-top:10px;color:#cbd5e1}
+    .scroll-down{display:grid;place-items:center;margin-top:18px;opacity:.7}
+
+    .hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=2400&auto=format&fit=crop") center/cover no-repeat; filter:blur(6px) brightness(.55); transform:scale(1.06);}
+    .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(700px 300px at 50% -40%, #ffffff33 0%, transparent 60%)}
+
+    @media(min-width:1000px){
+      .hero .container{grid-template-columns:1.1fr .9fr; align-items:center}
+      .hero-visual{min-height:420px}
+    }
+
+    .glass{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); backdrop-filter:blur(var(--blur)); box-shadow:var(--shadow)}
+
+    /* ===== SECTIONS ===== */
+    section{max-width:var(--max);margin:0 auto;padding:72px 22px}
+    h2.section-title{font-size:clamp(26px,4vw,40px);margin:0 0 18px}
+    p.section-lead{color:var(--muted);max-width:70ch}
+
+    .grid{display:grid;gap:22px}
+    .grid.cols-3{grid-template-columns:repeat(1,1fr)}
+    .grid.cols-4{grid-template-columns:repeat(1,1fr)}
+    @media(min-width:720px){
+      .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+      .grid.cols-4{grid-template-columns:repeat(4,1fr)}
+    }
+
+    .card{padding:22px; border-radius:16px; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));}
+    .card h3{margin:6px 0 6px}
+    .muted{color:var(--muted)}
+
+    /* Blog cards */
+    .post{display:flex;flex-direction:column;gap:12px}
+    .post .thumb{aspect-ratio:16/9;border-radius:14px;background:#111;border:1px solid var(--border);overflow:hidden}
+    .post .thumb img{width:100%;height:100%;object-fit:cover}
+    .post .meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px}
+
+    /* Testimony rail */
+    .rail{display:flex;gap:16px;overflow:auto;padding:6px 4px}
+    .chip{padding:10px 14px;border-radius:999px;white-space:nowrap;border:1px solid var(--border);background:var(--card)}
+
+    /* Podcast form */
+    form{display:grid;gap:12px}
+    input, textarea, select{background:#0e141f;border:1px solid #2a3550;color:var(--text);padding:12px 14px;border-radius:12px;outline:none}
+    input:focus, textarea:focus{border-color:#6aa7ff}
+    .btn.inline{width:max-content}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border); background:rgba(255,255,255,.02)}
+    .footer-grid{display:grid;gap:22px;grid-template-columns:1fr}
+    @media(min-width:860px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+    .socials{display:flex;gap:10px}
+    .socials a{display:grid;place-items:center;height:38px;width:38px;border-radius:10px;border:1px solid var(--border);background:var(--card)}
+
+    /* Utility */
+    .center{display:grid;place-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:linear-gradient(135deg,#183049,#101826);border:1px solid #263043;color:#9fb4d7}
+    .accent{color:var(--brand)}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <div class="nav-wrap">
+    <nav aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Level 7 Faith home">
+        <span class="logo">L7</span>
+        <span>
+          Level 7 <span class="accent">Faith</span>
+          <small>Where Stories Meet Salvation</small>
+        </span>
+      </a>
+      <div class="spacer"></div>
+      <div class="menu">
+        <a href="#testimonies">Testimonies</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#blog">Blog</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="cta hide-mobile">
+          <a class="btn ghost" href="#share">Share Testimony</a>
+          <a class="btn primary" href="#guest">Be a Podcast Guest</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-card">
+        <span class="badge">Powerful stories • Real people • Jesus changes everything</span>
+        <h1 class="title">Where Stories Meet <span class="accent">Salvation</span></h1>
+        <p class="lead">Powerful testimonies and faith‑filled conversations that inspire believers to deepen their relationship with Jesus Christ — and invite seekers to discover eternal life in Him.</p>
+        <div class="actions">
+          <a class="btn primary" href="#share">Share Your Testimony</a>
+          <a class="btn" href="#guest">Be a Podcast Guest</a>
+          <a class="btn ghost" href="#live">Live Social Feed</a>
+        </div>
+        <p class="kicker">“Let the redeemed of the LORD tell their story.” — Psalm 107:2</p>
+        <div class="scroll-down" aria-hidden="true">⬇</div>
+      </div>
+      <div class="hero-visual glass center">
+        <div style="padding:28px;text-align:center">
+          <h3 style="margin:0 0 8px">This Week on the <span class="accent">Podcast</span></h3>
+          <p class="muted" style="margin:0 0 14px">Latest testimony highlight & trailer</p>
+          <!-- Replace with your real embed or image -->
+          <div class="card" style="padding:0; overflow:hidden">
+            <iframe style="display:block;width:100%;height:260px;border:0" loading="lazy" src="https://open.spotify.com/embed/episode/0b" title="Podcast trailer placeholder"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TESTIMONIES rail -->
+  <section id="testimonies">
+    <h2 class="section-title">Recent Testimonies</h2>
+    <p class="section-lead">Real stories of redemption, recovery, and renewed purpose. Record yours and bless someone who needs hope.</p>
+    <div class="rail">
+      <span class="chip">Addiction → Freedom</span>
+      <span class="chip">Anxiety → Peace</span>
+      <span class="chip">Broken Home → Restoration</span>
+      <span class="chip">Sickness → Healing</span>
+      <span class="chip">Doubt → Faith</span>
+      <span class="chip">Isolation → Community</span>
+    </div>
+
+    <div class="grid cols-3" style="margin-top:18px">
+      <!-- Testimony cards (replace with CMS later) -->
+      <article class="card">
+        <h3>“God met me in the rehab chapel.”</h3>
+        <p class="muted">By Marcus • 4 min read</p>
+        <p>From fentanyl dependency to freedom in Christ. The night everything changed—and how community kept me steady.</p>
+        <a class="btn inline" href="#">Read</a>
+      </article>
+      <article class="card">
+        <h3>“He turned my mourning into dancing.”</h3>
+        <p class="muted">By Naomi • 6 min read</p>
+        <p>Grief felt endless—until the Lord met me through the Word and a small group that wouldn’t give up on me.</p>
+        <a class="btn inline" href="#">Read</a>
+      </article>
+      <article class="card">
+        <h3>“Back from the edge.”</h3>
+        <p class="muted">By David • 5 min read</p>
+        <p>Suicidal ideation, a late‑night prayer, and the phone call that changed everything. Jesus truly sees.</p>
+        <a class="btn inline" href="#">Read</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- PODCAST GUEST FORM -->
+  <section id="podcast" class="glass">
+    <div style="max-width:900px;margin:0 auto">
+      <h2 class="section-title">Be a Podcast Guest</h2>
+      <p class="section-lead">Have a testimony to share? We’d love to hear it. Tell us a bit about you below and our team will follow up.</p>
+      <form aria-label="Podcast guest form" onsubmit="event.preventDefault();alert('Thanks! We\'ll be in touch soon.');">
+        <div class="grid" style="grid-template-columns:1fr;gap:12px">
+          <input required placeholder="Full name" />
+          <input required type="email" placeholder="Email" />
+          <input placeholder="Phone (optional)" />
+          <textarea rows="5" placeholder="In a few sentences, what is your story?"></textarea>
+          <button class="btn primary inline" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <h2 class="section-title">From the Blog</h2>
+    <p class="section-lead">Articles and resources to help you Recover, Redeem, and Rebuild—rooted in Scripture and real‑world discipleship.</p>
+    <div class="grid cols-3" style="margin-top:18px">
+      <article class="post">
+        <a class="thumb" href="#"><img alt="Worship" src="https://images.unsplash.com/photo-1520975922284-7b683db17c5b?q=80&w=1200&auto=format&fit=crop"/></a>
+        <div class="meta"><span>Discipleship</span> • <time>Aug 2025</time></div>
+        <h3><a href="#">How to Share Your Testimony with Confidence</a></h3>
+        <p class="muted">Practical steps and a simple framework that keeps Jesus at the center.</p>
+      </article>
+      <article class="post">
+        <a class="thumb" href="#"><img alt="Bible" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop"/></a>
+        <div class="meta"><span>Bible</span> • <time>Aug 2025</time></div>
+        <h3><a href="#">Psalm 107:2 — Let the Redeemed Say So</a></h3>
+        <p class="muted">A short meditation on the power of testimony in Scripture and today.</p>
+      </article>
+      <article class="post">
+        <a class="thumb" href="#"><img alt="Community" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop"/></a>
+        <div class="meta"><span>Community</span> • <time>Jul 2025</time></div>
+        <h3><a href="#">Finding Healing in Community</a></h3>
+        <p class="muted">Why isolation lies—and how Jesus uses people to restore people.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- RESOURCES + LIVE FEED -->
+  <section id="resources" class="glass">
+    <div class="grid cols-3">
+      <div>
+        <h2 class="section-title">Resources</h2>
+        <p class="section-lead">Courses, reading plans, and tools from the Level 7 family.</p>
+        <ul class="muted" style="padding-left:18px">
+          <li>R3 Method: Recover • Redeem • Rebuild</li>
+          <li>30‑Day Gospel Reading Plan</li>
+          <li>New Believer’s Start Kit (free)</li>
+          <li>Church & Rehab Partnerships</li>
+        </ul>
+        <a class="btn inline" href="#">Explore all</a>
+      </div>
+      <div>
+        <h3 style="margin:0 0 10px">Live X (Twitter) Feed</h3>
+        <p class="muted" style="margin:0 0 12px">Your latest posts appear automatically.</p>
+        <div class="card" style="padding:0;overflow:hidden">
+          <!-- Replace the handle below with your account -->
+          <a class="twitter-timeline" data-theme="dark" data-height="420" href="https://twitter.com/Interior?ref_src=twsrc%5Etfw">Tweets by Level7Faith</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin:0 0 10px">Newsletter</h3>
+        <p class="muted">Get testimonies, resources, and events in your inbox.</p>
+        <form onsubmit="event.preventDefault(); alert('Subscribed!');">
+          <input required type="email" placeholder="you@email.com" />
+          <button class="btn primary inline" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About Level 7 Faith</h2>
+    <p class="section-lead">A ministry of Level 7 Media. We exist to amplify the name of Jesus through stories of redemption and practical discipleship that helps people take the next faithful step.</p>
+    <div class="grid cols-3" style="margin-top:18px">
+      <div class="card"><h3>Our Convictions</h3><p class="muted">Jesus is Lord. Scripture is our foundation. Testimonies point to the Gospel. Discipleship changes lives.</p></div>
+      <div class="card"><h3>Our Approach</h3><p class="muted">Story‑first media, pastoral care partnerships, and resources that move people from inspiration to transformation.</p></div>
+      <div class="card"><h3>Our Team</h3><p class="muted">Founders DJ & Shaun with a family of contributors, pastors, and volunteers.
+      </p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="glass">
+    <div class="grid cols-3">
+      <div>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-lead">Have a question, partnership idea, or testimony to share? Reach out.</p>
+        <p class="muted">Email: <a href="mailto:admin@level7faith.com">admin@level7faith.com</a></p>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Message sent!');">
+        <input required placeholder="Your name" />
+        <input required type="email" placeholder="Email" />
+        <textarea rows="4" placeholder="How can we serve you?"></textarea>
+        <button class="btn primary inline" type="submit">Send Message</button>
+      </form>
+      <div>
+        <h3 style="margin:0 0 10px">Visit</h3>
+        <p class="muted">Detroit, Michigan • Serving churches and rehabs nationwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <section class="footer-grid" style="max-width:var(--max);margin:0 auto;padding:40px 22px">
+      <div>
+        <div class="brand" style="margin-bottom:10px"><span class="logo">L7</span><strong>Level 7 Faith</strong></div>
+        <p class="muted">© <span id="year"></span> Level 7 Media. Faith content is always free. Scholarship‑based offers available for courses and events.</p>
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="X/Twitter">✕</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="Spotify">♪</a>
+        </div>
+      </div>
+      <div>
+        <h4>Ministry</h4>
+        <a class="muted" href="#testimonies">Testimonies</a><br />
+        <a class="muted" href="#podcast">Podcast</a><br />
+        <a class="muted" href="#resources">Resources</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a class="muted" href="#about">About</a><br />
+        <a class="muted" href="#contact">Contact</a><br />
+        <a class="muted" href="#">Privacy</a>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <a class="muted" href="#share">Share Your Story</a><br />
+        <a class="muted" href="#guest">Be a Guest</a><br />
+        <a class="muted" href="#blog">Write for Us</a>
+      </div>
+    </section>
+  </footer>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
